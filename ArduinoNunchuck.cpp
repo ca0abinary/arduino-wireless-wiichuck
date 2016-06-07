@@ -28,7 +28,7 @@ byte ArduinoNunchuck::init()
 
   byte result = ArduinoNunchuck::_sendByte(0x55, 0xF0);
   if (result == 0) result = ArduinoNunchuck::_sendByte(0x00, 0xFB);
-  //if (result == 0) result = ArduinoNunchuck::_sendByte(0x00, 0x40);
+  if (result == 0) result = ArduinoNunchuck::_sendByte(0x00, 0x40);
   if (result == 0) result = ArduinoNunchuck::_sendByte(0x37, 0x12);
 
   return result;
